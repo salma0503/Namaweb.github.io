@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Beranda</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif, Georgia;
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background-image: url('gambar/bg.jpg'); 
+            background-size: cover;
+            background-position: center; 
+            background-repeat: no-repeat;
+        }
+        h1 {
+            font-family:'Times New Roman';
+            font-size: 300%;
+            font-weight: bold;
+            text-align: center;
+        }
+        h2 {
+            font-family:'Times New Roman';
+            font-size: 120%;
+            text-align: center;
+        }
+        h3 {
+            font-family: 'Times New Roman';
+            font-size: larger;
+            text-align: start;
+        }
+        header {
+            background-color: #ebccf6;
+            color: white;
+            padding: 10px 0;
+        }
+        .logo-img {
+            width: 50px;
+            margin-right: 10px;
+        }
+        .navbar-brand {
+            font-weight: bold;
+        }
+        footer {
+            background-color: #ebccf6;
+            padding: 0.5rem;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            border-radius: 2px;
+        }
+        .steps-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .step-box {
+            background-color: #ffffff;
+            border: 2px solid #ebccf6;
+            border-radius: 10px;
+            padding: 15px;
+            width: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .step-box h4 {
+            font-size: 18px;
+            margin-bottom: 10px;
+            color: black;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .step-box h4:hover {
+            color: rgb(4, 4, 33);
+        }
+        .step-box p {
+            font-size: 14px;
+            margin: 0;
+        }
+        body {
+         font-size: 16px;
+        margin: 0;
+        }
+
+        @media (max-width: 768px) {
+        body {
+        font-size: 14px;
+        }
+        }
+
+        @media (max-width: 480px) {
+        body {
+        font-size: 12px;
+        padding: 10px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">Shine-Library</a>
+                <img src="book.png" alt="logo" class="logo-img">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Beranda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="transaksi.html">Transaksi</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profil.html">Profil</a>
+                        </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="bookmark.html">Collection Book</a>
+                    </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <br>
+        <h1>Selamat Datang di Shine-Library</h1>
+        <br>
+        <h2>Di mana pun kamu berada, Shine-Library selalu ada untuk 
+        <p>menghubungkan dan merekomendasikan buku favoritmu kepada teman dan sahabatmu.</h2>
+        <br>
+        <h3>Langkah-langkah Menggunakan Aplikasi:</h3>
+        <div class="steps-container">
+            <div class="step-box">
+                <a class="nav-link" href="login.html">1. Login</a>
+                <p>Masuk ke akunmu untuk mengakses fitur penuh Shine-Library.</p>
+            </div>
+                <div class="step-box">
+                    <a class="nav-link" href="bookmark.html">2. Collection Book</a>
+                    <p>Jelajahi koleksi buku fiksi kami dan temukan cerita menarik untuk hiburan dan bacaan Anda.</p>
+            </div>
+                <div class="step-box">
+                    <a class="nav-link" href="transaksi.html">3. Transaksi Peminjaman</a>
+                    <p>Isi formulir peminjaman dan periksa detail buku sebelum melanjutkan.</p>
+            </div>
+                <div class="step-box">
+                    <a class="nav-link" href="profil.html">4. Profil</a>
+                    <p>Cek untuk mengetahui informasi tentang perpustakaan, seperti visi, misi, dan layanan yang tersedia.</p>
+            </div>
+        </div>
+    </div>        
+    <footer>
+        <div class="container text-center">
+            Design by Salma Putri Dewi 241011700611 &copy; 2025 Allright Reserved
+        </div>
+    </footer>
+    <script>
+        setTimeout(() => {
+            alert('Selamat datang di Shine-Library! Temukan bacaan yang kamu inginkan!.');
+        }, 2000);
+
+        const navLinks = document.querySelectorAll('nav a');
+        navLinks.forEach(link => {
+            link.addEventListener('mouseover', () => {
+                link.style.color = '#red';
+            });
+            link.addEventListener('mouseout', () => {
+                link.style.color = 'ungu';
+            });
+        });
+    </script>
+ </body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            background-color: #ebccf6;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .avatar {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: calc(50% - 40px);
+            position: absolute;
+            border: 1px solid white;
+            border-radius: 50%;
+        }
+        .login-container {
+            background-color: #ffffff;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+        .login-container h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333333;
+        }
+        .form-field {
+            margin-bottom: 15px;
+            position: relative;
+        }
+        .form-field input {
+            width: 100%;
+            padding: 10px 5px;
+            border: 1px solid #dddddd;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+        .form-field input:focus {
+            border-color: #7f56d9;
+        }
+        .form-field.error input {
+            border-color: #e74c3c;
+        }
+        .form-field.error .error-message {
+            color: #e74c3c;
+            font-size: 14px;
+            margin-top: 5px;
+            text-align: left;
+        }
+        button {
+            background-color: #7f56d9;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #6a46b5;
+        }
+        body {
+         font-size: 16px;
+        margin: 0;
+        }
+
+        @media (max-width: 768px) {
+        body {
+        font-size: 14px;
+        }
+        }
+
+        @media (max-width: 480px) {
+        body {
+        font-size: 12px;
+        padding: 10px;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="icon.jpg" class="avatar">
+    </div>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="loginForm">
+            <div class="form-field" id="usernameField">
+                <input type="text" id="username" placeholder="Username">
+                <div class="error-message"></div>
+            </div>
+            <div class="form-field" id="passwordField">
+                <input type="password" id="password" placeholder="Password">
+                <div class="error-message"></div>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const usernameField = document.getElementById('usernameField');
+            const passwordField = document.getElementById('passwordField');
+            const usernameInput = document.getElementById('username');
+            const passwordInput = document.getElementById('password');
+
+            let isValid = true;
+
+            usernameField.classList.remove('error');
+            passwordField.classList.remove('error');
+            usernameField.querySelector('.error-message').innerText = '';
+            passwordField.querySelector('.error-message').innerText = '';
+
+            const username = usernameInput.value.trim();
+            if (!username) {
+                isValid = false;
+                usernameField.classList.add('error');
+                usernameField.querySelector('.error-message').innerText = 'Username harus diisi.';
+            }
+
+            const password = passwordInput.value.trim();
+            if (!password) {
+                isValid = false;
+                passwordField.classList.add('error');
+                passwordField.querySelector('.error-message').innerText = 'Password harus diisi.';
+            }
+
+            if (isValid) {
+                alert('Login berhasil!');
+                window.location.href = "index.html";
+            }
+        });
+    </script>
+</body>
+</html>
