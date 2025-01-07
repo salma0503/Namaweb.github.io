@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Beranda</title>
     <style>
         body {
@@ -19,18 +18,20 @@
         h1 {
             font-family:'Times New Roman';
             font-size: 300%;
-            font-weight: bold;
+            font-weight: normal;
             text-align: center;
         }
         h2 {
             font-family:'Times New Roman';
             font-size: 120%;
+            font-weight: normal;
             text-align: center;
         }
         h3 {
             font-family: 'Times New Roman';
             font-size: larger;
-            text-align: start;
+            font-weight: normal;
+            text-align: center;
         }
         header {
             background-color: #ebccf6;
@@ -65,10 +66,10 @@
             border: 2px solid #ebccf6;
             border-radius: 10px;
             padding: 15px;
-            width: 200px;
+            width: 170px;
+            height: auto;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
         }
         .step-box h4 {
             font-size: 18px;
@@ -101,38 +102,66 @@
         padding: 10px;
         }
         }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5e5f7;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #e6cce4;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+
+        .logo span {
+            font-size: 20px;
+            font-weight: bold;
+            color: #4a3a4b;
+        }
+
+        .nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #4a3a4b;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #000;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-light">
-            <div class="container">
-                <a class="navbar-brand" href="#">Shine-Library</a>
-                <img src="book.png" alt="logo" class="logo-img">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Beranda</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="transaksi.html">Transaksi</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="profil.html">Profil</a>
-                        </li>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="bookmark.html">Collection Book</a>
-                    </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login.html">Login</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <header class="header">
+        <div class="logo">
+            <img src="book.png" alt="Book Icon">
+            <span>Shine-Library</span>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Beranda</a>
+            <a href="transaksi.html">Transaksi</a>
+            <a href="profil.html">Profil</a>
+            <a href="bookmark.html">Collection Book</a>
+            <a href="login.html">Login</a>
         </nav>
     </header>
 
@@ -141,25 +170,25 @@
         <h1>Selamat Datang di Shine-Library</h1>
         <br>
         <h2>Di mana pun kamu berada, Shine-Library selalu ada untuk 
-        <p>menghubungkan dan merekomendasikan buku favoritmu kepada teman dan sahabatmu.</h2>
+        <br>menghubungkan dan merekomendasikan buku favoritmu kepada teman dan sahabatmu.</h2>
         <br>
         <h3>Langkah-langkah Menggunakan Aplikasi:</h3>
         <div class="steps-container">
             <div class="step-box">
-                <a class="nav-link" href="login.html">1. Login</a>
+                <h5>Login</h5>
                 <p>Masuk ke akunmu untuk mengakses fitur penuh Shine-Library.</p>
             </div>
                 <div class="step-box">
-                    <a class="nav-link" href="bookmark.html">2. Collection Book</a>
+                    <h5>Collection Book</h5>
                     <p>Jelajahi koleksi buku fiksi kami dan temukan cerita menarik untuk hiburan dan bacaan Anda.</p>
             </div>
                 <div class="step-box">
-                    <a class="nav-link" href="transaksi.html">3. Transaksi Peminjaman</a>
+                    <h5>Transaksi Peminjaman</h5>
                     <p>Isi formulir peminjaman dan periksa detail buku sebelum melanjutkan.</p>
             </div>
                 <div class="step-box">
-                    <a class="nav-link" href="profil.html">4. Profil</a>
-                    <p>Cek untuk mengetahui informasi tentang perpustakaan, seperti visi, misi, dan layanan yang tersedia.</p>
+                    <h5>Profil</h5>
+                    <p>Cek untuk mengetahui informasi tentang perpustakaan.</p>
             </div>
         </div>
     </div>        
