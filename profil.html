@@ -5,102 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil Perpustakaan</title>
     <style>
-        body {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow';
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-        }
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #ebccf6;
-            padding: 15px 20px;
-            text-align: center;
-        }
-        .container {
-            max-width: 800px;
-            margin: 20px auto;
-            background: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #333;
-            text-align: center;
-            font-family: 'Gill Sans';
-        }
-        p {
-            line-height: 1.6;
-            color: #555;
-            font-family: Georgia;
-        }
-        body {
-         font-size: 16px;
-        margin: 0;
-        }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5e5f7;
+}
 
-        @media (max-width: 768px) {
-        body {
-        font-size: 14px;
-        }
-        }
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #e6cce4;
+}
 
-        @media (max-width: 480px) {
-        body {
-        font-size: 12px;
-        padding: 10px;
-        }
-        }
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f5e5f7;
-        }
+.logo {
+  display: flex;
+  align-items: center;
+}
 
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-            background-color: #e6cce4;
-        }
+.logo img {
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+}
 
-        .logo {
-            display: flex;
-            align-items: center;
-        }
+.logo span {
+  font-size: 20px;
+  font-weight: bold;
+  color: #4a3a4b;
+}
 
-        .logo img {
-            width: 24px;
-            height: 24px;
-            margin-right: 8px;
-        }
+.nav {
+  display: flex;
+  gap: 15px;
+}
 
-        .logo span {
-            font-size: 20px;
-            font-weight: bold;
-            color: #4a3a4b;
-        }
+.nav a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #4a3a4b;
+  transition: color 0.3s ease;
+}
 
-        .nav {
-            display: flex;
-            gap: 15px;
-        }
-
-        .nav a {
-            text-decoration: none;
-            font-size: 16px;
-            color: #4a3a4b;
-            transition: color 0.3s ease;
-        }
-
-        .nav a:hover {
-            color: #000;
-        }
-    </style>
+.nav a:hover {
+  color: #000;
+}
+</style>
 </head>
 <body>
     <header class="header">
