@@ -27,10 +27,6 @@
         }
         h1 {
             color: #333;
-            text-align: left;
-        }
-        h2 {
-            color: #333;
             text-align: center;
         }
         p {
@@ -54,15 +50,73 @@
         padding: 10px;
         }
         }
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5e5f7;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #e6cce4;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+
+        .logo span {
+            font-size: 20px;
+            font-weight: bold;
+            color: #4a3a4b;
+        }
+
+        .nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #4a3a4b;
+            transition: color 0.3s ease;
+        }
+
+        .nav a:hover {
+            color: #000;
+        }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Profil ✿⁠ </h1>
+    <header class="header">
+        <div class="logo">
+            <img src="book.png" alt="Book Icon">
+            <span>Shine-Library</span>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Beranda</a>
+            <a href="transaksi.html">Transaksi</a>
+            <a href="profil.html">Profil</a>
+            <a href="bookmark.html">Collection Book</a>
+            <a href="login.html">Login</a>
+        </nav>
     </header>
+</body>
+</html>
 
     <section class="container">
-        <h2>Tentang Kami</h2>
+        <h1>Profil Kami✿⁠ </h1>
         <p>Shinelibrary adalah website perpustakaan yang bertujuan menjadi sumber utama bagi pencinta sastra fiksi dengan menyediakan akses mudah ke koleksi buku yang beragam.</p>
         <p>Visi kami adalah menginspirasi kecintaan membaca melalui program promosi, diskusi buku, dan sumber daya edukasi.</p>
         <p>Perpustakaan kami juga menyediakan fasilitas yang nyaman, termasuk ruang baca yang luas, akses internet, dan area membaca untuk pengunjung.</p>
