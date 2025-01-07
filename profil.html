@@ -5,69 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profil Perpustakaan</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f5e5f7;
-        }
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f5e5f7;
+    }
 
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            background-color: #e6cce4;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo img {
-            width: 24px;
-            height: 24px;
-            margin-right: 8px;
-        }
-
-        .logo span {
-            font-size: 20px;
-            font-weight: bold;
-            color: #4a3a4b;
-        }
-
-        .nav {
-            display: flex;
-            gap: 15px;
-        }
-
-        .nav a {
-            text-decoration: none;
-            font-size: 16px;
-            color: #4a3a4b;
-            transition: color 0.3s ease;
-        }
-
-        .nav a:hover {
-            color: #000;
-        }
-
-        @media (max-width: 768px) {
     .header {
-        flex-direction: column; 
-        align-items: flex-start;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #e6cce4;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .logo img {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+    }
+
+    .logo span {
+        font-size: 20px;
+        font-weight: bold;
+        color: #4a3a4b;
     }
 
     .nav {
-        flex-direction: column;
-        gap: 10px; 
-        width: 100%; 
-        margin-top: 10px; 
+        display: flex;
+        gap: 15px;
     }
-}
 
-    </style>
-    </head>
+    .nav a {
+        text-decoration: none;
+        font-size: 16px;
+        color: #4a3a4b;
+        transition: color 0.3s ease;
+    }
+
+    .nav a:hover {
+        color: #000;
+    }
+
+    /* Responsive styles for all media sizes */
+    @media (max-width: 1024px) {
+        .header {
+            padding: 10px 15px;
+        }
+
+        .logo span {
+            font-size: 18px;
+        }
+
+        .nav a {
+            font-size: 15px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .header {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .nav {
+            flex-direction: column;
+            gap: 10px;
+            width: 100%;
+            margin-top: 10px;
+        }
+
+        .nav a {
+            font-size: 14px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .logo span {
+            font-size: 16px;
+        }
+
+        .nav a {
+            font-size: 12px;
+        }
+    }
+
+    @media (max-width: 360px) {
+        .logo span {
+            font-size: 14px;
+        }
+
+        .nav a {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .nav {
+            gap: 8px;
+        }
+    }
+</style>
+</head>
 <body>
     <header class="header">
         <div class="logo">
