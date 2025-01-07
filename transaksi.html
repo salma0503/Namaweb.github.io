@@ -6,10 +6,64 @@
     <title>Form Transaksi Perpustakaan</title>
     <style>
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #ebccf6;
+            background-color: #f5e5f7;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: #e6cce4;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+
+        .logo span {
+            font-size: 20px;
+            font-weight: bold;
+            color: #4a3a4b;
+        }
+
+        .nav {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            font-size: 16px;
+            color: #4a3a4b;
+            transition: color 0.3s ease;
+        }
+        .nav a:hover {
+            color: #000;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: white;
             margin: 0;
             padding: 0;
+        }        
+        header {
+            background-color: #ebccf6;
+            color: white;
+            padding: 10px 0;
+        }
+        .logo-img {
+            width: 50px;
+            margin-right: 10px;
         }
         .container {
             max-width: 600px;
@@ -92,6 +146,19 @@
     </style>
 </head>
 <body>
+    <header class="header">
+        <div class="logo">
+            <img src="book.png" alt="Book Icon">
+            <span>Shine-Library</span>
+        </div>
+        <nav class="nav">
+            <a href="index.html">Beranda</a>
+            <a href="transaksi.html">Transaksi</a>
+            <a href="profil.html">Profil</a>
+            <a href="bookmark.html">Collection Book</a>
+            <a href="login.html">Login</a>
+        </nav>
+    </header>
     <div class="container" id="formContainer">
         <h2>Form Transaksi</h2>
         <form id="transaksiForm">
